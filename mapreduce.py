@@ -1,5 +1,5 @@
 # The code below was provided as part of h/w from 6.033(Computer Systems Engineering) @ MIT
-# I've left most of it intact since I only wanted to use it to simulate mapreduce and the outcomes
+# I've left most of it intact since I only wanted to use it to simulate mapreduce and its outcomes
 # for some given number of map and reduce workers.
 
 
