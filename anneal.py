@@ -21,3 +21,7 @@ class Problem:
 
     def generate_random_state(self):
         return [random.randint(1, self.max_map_workers), random.randint(1, self.max_reduce_workers)]
+
+
+def schedule(t):
+    return 10-t
