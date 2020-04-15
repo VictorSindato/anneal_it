@@ -18,3 +18,6 @@ class Problem:
         wc.run()
         out = wc.Merge()
         return time.time() - start_time
+
+    def generate_random_state(self):
+        return [random.randint(1, self.max_map_workers), random.randint(1, self.max_reduce_workers)]
