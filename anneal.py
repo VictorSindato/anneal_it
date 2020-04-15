@@ -25,3 +25,21 @@ class Problem:
 
 def schedule(t):
     return 10-t
+
+def anneal(problem):
+    current = problem.state
+    t = 1
+    while True:
+        print("t=",t)
+        T = schedule(t)
+        if T == 0:
+            return "map workers:{}, reduce workers:{}".format(current[0], current[1])
+        # Select a random next state
+        next = problem.generate_random_state()
+        delta = problem.evaluate(current) - problem.evaluate(next) # shorter time means better performance
+        if delta > 0:
+            current = next
+        else:
+            if random.random() < pow(math.e, delta/T):
+                current = next
+        t += 1
