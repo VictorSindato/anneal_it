@@ -3,8 +3,6 @@ import random
 import time
 from mapreduce import *
 
-
-
 class Problem:
     def __init__(self, input_file_path, max_map_workers, max_reduce_workers):
         self.path = input_file_path
